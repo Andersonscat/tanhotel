@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tan Hotel - Contact Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: #2a2a2a;
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 60px 40px;
+            background: #333333;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-title {
+            font-family: 'Georgia', serif;
+            font-size: 36px;
+            font-weight: 400;
+            color: #ffffff;
+            margin-bottom: 40px;
+            text-align: center;
+            letter-spacing: -0.5px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 0;
+            border-bottom: 1px solid #444444;
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #8B7355;
+            color: white;
+            font-size: 12px;
+        }
+
+        .contact-icon.red {
+            background: #e74c3c;
+        }
+
+        .contact-icon.grey {
+            background: #95a5a6;
+        }
+
+        .contact-details {
+            flex: 1;
+        }
+
+        .contact-label {
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-value {
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+            color: #cccccc;
+            line-height: 1.4;
+        }
+
+        .contact-value a {
+            color: #8B7355;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-value a:hover {
+            color: #ffffff;
+        }
+
+        /* Иконки */
+        .icon-location::before {
+            content: "📍";
+        }
+
+        .icon-phone::before {
+            content: "📞";
+        }
+
+        .icon-email::before {
+            content: "✉️";
+        }
+
+        .icon-clock::before {
+            content: "🕒";
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                margin: 20px;
+                padding: 40px 30px;
+            }
+
+            .contact-title {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <h1 class="contact-title">Contact Us</h1>
+        
+        <div class="contact-info">
+            <div class="contact-item">
+                <div class="contact-icon red">
+                    <span class="icon-location"></span>
+                </div>
+                <div class="contact-details">
+                    <div class="contact-label">Address</div>
+                    <div class="contact-value">123 Luxury Avenue, Downtown District</div>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon grey">
+                    <span class="icon-phone"></span>
+                </div>
+                <div class="contact-details">
+                    <div class="contact-label">Phone</div>
+                    <div class="contact-value">
+                        <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon grey">
+                    <span class="icon-email"></span>
+                </div>
+                <div class="contact-details">
+                    <div class="contact-label">Email</div>
+                    <div class="contact-value">
+                        <a href="mailto:reservations@tanhotel.com">reservations@tanhotel.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon grey">
+                    <span class="icon-clock"></span>
+                </div>
+                <div class="contact-details">
+                    <div class="contact-label">Check-in/Check-out</div>
+                    <div class="contact-value">Check-in: 3:00 PM | Check-out: 11:00 AM</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

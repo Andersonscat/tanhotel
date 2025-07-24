@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Six Senses - Guest Information</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: white;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 60px;
+        }
+
+        .guest-info-left h2 {
+            font-family: 'Georgia', serif;
+            font-size: 32px;
+            font-weight: 400;
+            color: #1a1a1a;
+            margin-bottom: 40px;
+            letter-spacing: -0.5px;
+        }
+
+        .guest-form {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        label {
+            font-family: 'Arial', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            color: #1a1a1a;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        input, select {
+            padding: 12px 16px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+            height: 48px;
+            background: white;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #8B7355;
+        }
+
+        .booking-summary {
+            background: #f8f8f8;
+            padding: 40px;
+            border-radius: 8px;
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+        }
+
+        .booking-summary h3 {
+            font-family: 'Georgia', serif;
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            color: #1a1a1a;
+        }
+
+        .summary-item {
+            margin-bottom: 20px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .summary-item strong {
+            color: #1a1a1a;
+        }
+
+        .summary-item span {
+            color: #666;
+        }
+
+        .edit-link {
+            color: #8B7355;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .edit-link:hover {
+            text-decoration: underline;
+        }
+
+        .summary-divider {
+            border-top: 1px solid #e0e0e0;
+            margin: 30px 0;
+        }
+
+        .total-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .total-price {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .cancellation-policy {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f0f0f0;
+            border-radius: 4px;
+            font-size: 12px;
+            line-height: 1.4;
+            color: #666;
+        }
+
+        .info-icon {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: #8B7355;
+            border-radius: 50%;
+            color: white;
+            text-align: center;
+            line-height: 16px;
+            font-size: 10px;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="guest-info-left">
+            <h2>Guest Information</h2>
+            
+            <form class="guest-form">
+                <div class="form-group">
+                    <label>TITLE *</label>
+                    <select required>
+                        <option value="">Select Title</option>
+                        <option value="Mr">Mr</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Ms">Ms</option>
+                        <option value="Dr">Dr</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>FIRST NAME *</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>LAST NAME *</label>
+                        <input type="text" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>E-MAIL ADDRESS *</label>
+                    <input type="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>COUNTRY *</label>
+                    <select required>
+                        <option value="">Select Country</option>
+                        <option value="US">United States</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="CA">Canada</option>
+                        <option value="AU">Australia</option>
+                        <option value="DE">Germany</option>
+                        <option value="FR">France</option>
+                        <option value="IT">Italy</option>
+                        <option value="ES">Spain</option>
+                        <option value="JP">Japan</option>
+                        <option value="CN">China</option>
+                        <option value="IN">India</option>
+                        <option value="BR">Brazil</option>
+                        <option value="RU">Russia</option>
+                        <option value="KZ">Kazakhstan</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>ADDRESS *</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="form-group">
+                    <label>ADDRESS, ADDITIONAL INFORMATION</label>
+                    <input type="text" placeholder="Optional">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>CITY *</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>POSTAL CODE *</label>
+                        <input type="text" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>PHONE *</label>
+                    <input type="tel" required>
+                </div>
+            </form>
+        </div>
+
+        <div class="booking-summary">
+            <h3>Booking Summary</h3>
+            
+            <div class="summary-item">
+                <strong>Check-in:</strong> <span>December 15, 2024</span>
+                <a href="#" class="edit-link">Edit</a>
+            </div>
+            
+            <div class="summary-item">
+                <strong>Check-out:</strong> <span>December 18, 2024</span>
+                <a href="#" class="edit-link">Edit</a>
+            </div>
+            
+            <div class="summary-item">
+                <strong>Guests:</strong> <span>2 Adults</span>
+                <a href="#" class="edit-link">Edit</a>
+            </div>
+            
+            <div class="summary-item">
+                <strong>Room:</strong> <span>Ocean View Suite</span>
+                <a href="#" class="edit-link">Edit</a>
+            </div>
+            
+            <div class="summary-item">
+                <strong>Breakfast:</strong> <span>Included</span>
+                <a href="#" class="edit-link">Edit</a>
+            </div>
+
+            <div class="summary-divider"></div>
+
+            <div class="total-item">
+                <span>Room Rate (3 nights)</span>
+                <span>$2,400</span>
+            </div>
+            
+            <div class="total-item">
+                <span>Taxes & Fees</span>
+                <span>$240</span>
+            </div>
+            
+            <div class="summary-divider"></div>
+            
+            <div class="total-item">
+                <strong>Total</strong>
+                <strong class="total-price">$2,640</strong>
+            </div>
+
+            <div class="cancellation-policy">
+                <span class="info-icon">i</span>
+                <strong>Cancellation Policy:</strong> Free cancellation up to 24 hours before check-in. No refund for cancellations within 24 hours of arrival.
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
