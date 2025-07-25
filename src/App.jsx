@@ -283,6 +283,11 @@ function App() {
   const [showCalendar, setShowCalendar] = useState(false)
   const [selectedDates, setSelectedDates] = useState({ checkIn: null, checkOut: null })
   const [hoveredDate, setHoveredDate] = useState(null)
+  const [showGuestSelector, setShowGuestSelector] = useState(false)
+  const [guestCount, setGuestCount] = useState({ adults: 2, children: 0 })
+  const [roomCount, setRoomCount] = useState(1)
+  const [showRoomSelector, setShowRoomSelector] = useState(false)
+  const [bookingError, setBookingError] = useState('')
   
   // Get current month index (0-11) for 2025
   const getCurrentMonthIndex = () => {
@@ -511,11 +516,17 @@ function App() {
     const [year, month, day] = dateString.split('-').map(Number)
     const date = new Date(year, month - 1, day) // month - 1 потому что месяцы 0-indexed
     
-    // Используем простое локальное форматирование
-    return date.toLocaleDateString('en-US', { 
+    // Получаем день недели (сокращенное название)
+    const dayOfWeek = date.toLocaleDateString('en-US', { weekday: 'short' })
+    
+    // Форматируем дату
+    const formattedDate = date.toLocaleDateString('en-US', { 
       month: 'short', 
       day: 'numeric'
     })
+    
+    // Возвращаем в формате "Aug 4, Wed"
+    return `${formattedDate}, ${dayOfWeek}`
   }
 
   const openCalendar = () => {
@@ -525,6 +536,65 @@ function App() {
   const closeCalendar = () => {
     setShowCalendar(false)
     setHoveredDate(null)
+  }
+
+  const openGuestSelector = () => {
+    setShowGuestSelector(true)
+  }
+
+  const closeGuestSelector = () => {
+    setShowGuestSelector(false)
+  }
+
+  const updateGuestCount = (type, action) => {
+    setGuestCount(prev => {
+      const newCount = { ...prev }
+      if (action === 'increase') {
+        if (type === 'adults') {
+          newCount.adults = Math.min(newCount.adults + 1, 10)
+        } else {
+          newCount.children = Math.min(newCount.children + 1, 8)
+        }
+      } else if (action === 'decrease') {
+        if (type === 'adults') {
+          newCount.adults = Math.max(newCount.adults - 1, 1)
+        } else {
+          newCount.children = Math.max(newCount.children - 1, 0)
+        }
+      }
+      return newCount
+    })
+  }
+
+  const updateRoomCount = (count) => {
+    setRoomCount(count)
+    setShowRoomSelector(false)
+  }
+
+  const validateBooking = () => {
+    const totalGuests = guestCount.adults + guestCount.children
+    const maxGuestsPerRoom = 2
+    const requiredRooms = Math.ceil(totalGuests / maxGuestsPerRoom)
+    
+    if (roomCount > 2) {
+      setBookingError('Максимум 2 номера на одного бронирующего.')
+      return false
+    }
+    
+    if (totalGuests > roomCount * maxGuestsPerRoom) {
+      setBookingError(`Максимум ${maxGuestsPerRoom} гостя на номер. Пожалуйста, выберите больше номеров.`)
+      return false
+    }
+    
+    setBookingError('')
+    return true
+  }
+
+  const handleBookClick = () => {
+    if (validateBooking()) {
+      // Здесь можно добавить логику перехода к следующему шагу
+      console.log('Booking validated:', { selectedDates, guestCount, roomCount })
+    }
   }
 
   const nights = calculateNights()
@@ -545,11 +615,17 @@ function App() {
       if (showCalendar && !event.target.closest('.calendar-container') && !event.target.closest('.booking-form-field')) {
         setShowCalendar(false)
       }
+      if (showGuestSelector && !event.target.closest('.guest-field') && !event.target.closest('.guest-selector-dropdown')) {
+        setShowGuestSelector(false)
+      }
+      if (showRoomSelector && !event.target.closest('.room-field') && !event.target.closest('.room-selector-dropdown')) {
+        setShowRoomSelector(false)
+      }
     }
 
     document.addEventListener('mousedown', handleClickOutside)
     return () => document.removeEventListener('mousedown', handleClickOutside)
-  }, [showCalendar])
+  }, [showCalendar, showGuestSelector, showRoomSelector])
 
   return (
     <div className="ritz-style-root">
@@ -667,16 +743,119 @@ function App() {
               />
             </div>
             
-            <div className="booking-form-field">
+            <div className="booking-form-field room-field" onClick={() => setShowRoomSelector(!showRoomSelector)}>
+              <div className="field-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A68E66" strokeWidth="2">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                  <polyline points="9,22 9,12 15,12 15,22"></polyline>
+                </svg>
+              </div>
+              <input 
+                type="text" 
+                placeholder="Rooms" 
+                className="booking-input" 
+                value={`${roomCount} Room${roomCount > 1 ? 's' : ''}`}
+                readOnly
+              />
+              
+              {/* Room Selector Dropdown */}
+              {showRoomSelector && (
+                <div className="room-selector-dropdown">
+                  <div className="room-selector-content">
+                    {[1, 2, 3, 4].map(roomNum => (
+                      <button
+                        key={roomNum}
+                        className={`room-option ${roomCount === roomNum ? 'selected' : ''}`}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          updateRoomCount(roomNum);
+                        }}
+                      >
+                        {roomNum} Room{roomNum > 1 ? 's' : ''}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+            
+            <div className="booking-form-field guest-field" onClick={openGuestSelector}>
               <div className="field-icon">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A68E66" strokeWidth="2">
                   <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                   <circle cx="12" cy="7" r="4"></circle>
                 </svg>
               </div>
-              <input type="text" placeholder="2 Adults, 0 Children" className="booking-input" />
+              <input 
+                type="text" 
+                placeholder="2 Adults, 0 Children" 
+                className="booking-input" 
+                value={`${guestCount.adults} Adults, ${guestCount.children} Children`}
+                readOnly
+              />
+              
+              {/* Guest Selector Dropdown */}
+              {showGuestSelector && (
+                <div className="guest-selector-dropdown">
+                  <div className="guest-selector-content">
+                    <div className="guest-selector-section">
+                      <h3>Adults</h3>
+                      <div className="guest-counter">
+                        <button 
+                          className="guest-counter-btn" 
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            updateGuestCount('adults', 'decrease');
+                          }}
+                          disabled={guestCount.adults <= 1}
+                        >
+                          −
+                        </button>
+                        <span className="guest-counter-number">{guestCount.adults}</span>
+                        <button 
+                          className="guest-counter-btn" 
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            updateGuestCount('adults', 'increase');
+                          }}
+                          disabled={guestCount.adults >= 10}
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    
+                    <div className="guest-selector-section">
+                      <h3>Children</h3>
+                      <div className="guest-counter">
+                        <button 
+                          className="guest-counter-btn" 
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            updateGuestCount('children', 'decrease');
+                          }}
+                          disabled={guestCount.children <= 0}
+                        >
+                          −
+                        </button>
+                        <span className="guest-counter-number">{guestCount.children}</span>
+                        <button 
+                          className="guest-counter-btn" 
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            updateGuestCount('children', 'increase');
+                          }}
+                          disabled={guestCount.children >= 8}
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
-            
+
             <div className="booking-form-field">
               <div className="field-icon">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A68E66" strokeWidth="2">
@@ -687,7 +866,7 @@ function App() {
               <input type="text" placeholder="Special codes" className="booking-input" />
             </div>
             
-            <button className="booking-book-btn">
+            <button className="booking-book-btn" onClick={handleBookClick}>
               <span>Book</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
                 <circle cx="11" cy="11" r="8"></circle>
@@ -695,6 +874,14 @@ function App() {
               </svg>
             </button>
           </div>
+          
+          {/* Booking Error Message */}
+          {bookingError && (
+            <div className="booking-error">
+              <span className="error-icon">❌</span>
+              <span className="error-text">{bookingError}</span>
+            </div>
+          )}
         </div>
 
         {/* Calendar Modal */}
