@@ -702,18 +702,18 @@ function App() {
           <div className="calendar-modal">
             <div className="calendar-container">
               <button className="calendar-close" onClick={closeCalendar}>
-                ×
+                ✕
               </button>
               
               {/* Calendar Header with Navigation */}
               <div className="calendar-header">
-                <button className="calendar-nav-btn" onClick={() => handleMonthChange(-1)} disabled={currentMonth === 0}>
+                <button className="calendar-nav-btn-minimal" onClick={() => handleMonthChange(-1)} disabled={currentMonth === 0}>
                   ‹
                 </button>
                 <h2 className="calendar-title">
                   {calendarData[currentMonth].month} – {calendarData[currentMonth + 1]?.month || ''}
                 </h2>
-                <button className="calendar-nav-btn" onClick={() => handleMonthChange(1)} disabled={currentMonth >= calendarData.length - 2}>
+                <button className="calendar-nav-btn-minimal" onClick={() => handleMonthChange(1)} disabled={currentMonth >= calendarData.length - 2}>
                   ›
                 </button>
               </div>
