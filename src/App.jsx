@@ -87,101 +87,10 @@ const translations = {
     },
     contact: {
       title: 'Contact Us',
-      address: '4G88+Q6C, Astana 020000, Kazakhstan',
-      phone: '+1 (555) 123-4567',
+      address: 'улица А.Байтурсунова 20А, Astana 010000, Kazakhstan',
+      phone: '+7 708 482 0070',
       email: 'reservations@tanhotel.com',
       hours: 'Check-in: 3:00 PM | Check-out: 11:00 AM'
-    },
-    booking: {
-      backToHome: '← Back to Home',
-      progress: {
-        accommodation: 'ACCOMMODATION',
-        extra: 'EXTRA',
-        guestInfo: 'INFO',
-        bookingConfirm: 'CONFIRM'
-      },
-      steps: {
-        step1: {
-          title: 'Choose your room',
-          standardRoom: {
-            name: 'Standard Room',
-            desc: 'Comfortable and modern room with all essential amenities',
-            features: ['Queen Bed', 'City View', 'Free WiFi'],
-            price: '18,000₸ from',
-            selectBtn: 'SELECT ROOM',
-            bookNow: 'BOOK NOW'
-          },
-          deluxeRoom: {
-            name: 'Deluxe Room',
-            desc: 'Spacious room with premium amenities and city views',
-            features: ['King Bed', 'City View', 'Free WiFi', 'Mini Bar'],
-            price: '22,000₸ from',
-            selectBtn: 'SELECT ROOM',
-            bookNow: 'BOOK NOW'
-          }
-        },
-        step2: {
-          title: 'Select dates and guests',
-          selectCheckIn: 'Select check-in date',
-          selectCheckOut: 'Select check-out date',
-          back: 'Back',
-          continue: 'Continue'
-        },
-        step3: {
-          title: 'Guest Information',
-          titleLabel: 'Title',
-          selectTitle: 'Select title',
-          firstName: 'First Name',
-          firstNamePlaceholder: 'Enter your first name',
-          lastName: 'Last Name',
-          lastNamePlaceholder: 'Enter your last name',
-          email: 'Email',
-          emailPlaceholder: 'Enter your email',
-          phone: 'Phone',
-          back: 'Back',
-          completeBooking: 'Complete Booking',
-          processing: 'Processing...',
-          bookingSummary: 'Booking Summary',
-          checkIn: 'Check-in',
-          checkOut: 'Check-out',
-          guests: 'Guests',
-          room: 'Room',
-          breakfast: 'Breakfast',
-          notSelected: 'Not selected',
-          included: 'Included',
-          notIncluded: 'Not included',
-          edit: 'Edit',
-          roomRate: 'Room Rate',
-          nights: 'nights',
-          taxesFees: 'Taxes & Fees',
-          total: 'Total',
-          cancellationPolicy: 'Cancellation Policy',
-          cancellationText: 'Free cancellation up to 24 hours before check-in.'
-        },
-        step4: {
-          title: 'Booking Confirmed!',
-          confirmationMessage: 'Your reservation has been successfully confirmed. We look forward to welcoming you.',
-          bookingSummary: 'Booking Summary',
-          room: 'Room',
-          checkIn: 'Check-in',
-          checkOut: 'Check-out',
-          guests: 'Guests',
-          breakfast: 'Breakfast',
-          spaVouchers: 'Spa Vouchers',
-          backToHome: 'Back to Home'
-        }
-      },
-      calendar: {
-        selectCheckIn: 'Select check-in date',
-        selectCheckOut: 'Select check-out date',
-        available: 'Available',
-        selected: 'Selected',
-        inRange: 'In Range',
-        previewRange: 'Preview Range',
-        clearDates: '× Clear Dates',
-        daysSelected: 'days selected',
-        daySelected: 'day selected'
-      }
     }
   },
   ru: {
@@ -269,101 +178,10 @@ const translations = {
     },
     contact: {
       title: 'Свяжитесь с нами',
-      address: '4G88+Q6C, Астана 020000, Казахстан',
-      phone: '+1 (555) 123-4567',
+      address: 'улица А.Байтурсунова 20А, Астана 010000, Казахстан',
+      phone: '+7 708 482 0070',
       email: 'reservations@tanhotel.com',
       hours: 'Заезд: 15:00 | Выезд: 11:00'
-    },
-    booking: {
-      backToHome: '← Вернуться на главную',
-      progress: {
-        accommodation: 'РАЗМЕЩЕНИЕ',
-        extra: 'ДОПОЛНИТЕЛЬНО',
-        guestInfo: 'ИНФОРМАЦИЯ',
-        bookingConfirm: 'ПОДТВЕРЖДЕНИЕ'
-      },
-      steps: {
-        step1: {
-          title: 'Выберите номер',
-          standardRoom: {
-            name: 'Стандартный номер',
-            desc: 'Уютный и современный номер со всеми необходимыми удобствами',
-            features: ['Двуспальная кровать', 'Вид на город', 'Бесплатный WiFi'],
-            price: 'от 18 000₸',
-            selectBtn: 'ВЫБРАТЬ НОМЕР',
-            bookNow: 'ЗАБРОНИРОВАТЬ'
-          },
-          deluxeRoom: {
-            name: 'Делюкс номер',
-            desc: 'Просторный номер с премиальными удобствами и видом на город',
-            features: ['Кровать King-size', 'Вид на город', 'Бесплатный WiFi', 'Мини-бар'],
-            price: 'от 22 000₸',
-            selectBtn: 'ВЫБРАТЬ НОМЕР',
-            bookNow: 'ЗАБРОНИРОВАТЬ'
-          }
-        },
-        step2: {
-          title: 'Выберите даты и гостей',
-          selectCheckIn: 'Выберите дату заезда',
-          selectCheckOut: 'Выберите дату выезда',
-          back: 'Назад',
-          continue: 'Продолжить'
-        },
-        step3: {
-          title: 'Информация о госте',
-          titleLabel: 'Титул',
-          selectTitle: 'Выберите титул',
-          firstName: 'Имя',
-          firstNamePlaceholder: 'Введите ваше имя',
-          lastName: 'Фамилия',
-          lastNamePlaceholder: 'Введите вашу фамилию',
-          email: 'Email',
-          emailPlaceholder: 'Введите ваш email',
-          phone: 'Телефон',
-          back: 'Назад',
-          completeBooking: 'Завершить бронирование',
-          processing: 'Обработка...',
-          bookingSummary: 'Сводка бронирования',
-          checkIn: 'Заезд',
-          checkOut: 'Выезд',
-          guests: 'Гости',
-          room: 'Номер',
-          breakfast: 'Завтрак',
-          notSelected: 'Не выбрано',
-          included: 'Включено',
-          notIncluded: 'Не включено',
-          edit: 'Изменить',
-          roomRate: 'Стоимость номера',
-          nights: 'ночей',
-          taxesFees: 'Налоги и сборы',
-          total: 'Итого',
-          cancellationPolicy: 'Политика отмены',
-          cancellationText: 'Бесплатная отмена до 24 часов до заезда.'
-        },
-        step4: {
-          title: 'Бронирование подтверждено!',
-          confirmationMessage: 'Ваше бронирование успешно подтверждено. Мы с нетерпением ждем вас.',
-          bookingSummary: 'Сводка бронирования',
-          room: 'Номер',
-          checkIn: 'Заезд',
-          checkOut: 'Выезд',
-          guests: 'Гости',
-          breakfast: 'Завтрак',
-          spaVouchers: 'Спа-ваучеры',
-          backToHome: 'Вернуться на главную'
-        }
-      },
-      calendar: {
-        selectCheckIn: 'Выберите дату заезда',
-        selectCheckOut: 'Выберите дату выезда',
-        available: 'Доступно',
-        selected: 'Выбрано',
-        inRange: 'В диапазоне',
-        previewRange: 'Предварительный просмотр',
-        clearDates: '× Очистить даты',
-        daysSelected: 'дней выбрано',
-        daySelected: 'день выбран'
-      }
     }
   },
   kz: {
@@ -451,120 +269,38 @@ const translations = {
     },
     contact: {
       title: 'Бізбен байланысыңыз',
-      address: '4G88+Q6C, Астана 020000, Қазақстан',
-      phone: '+1 (555) 123-4567',
+      address: 'А.Байтұрсынов көшесі 20А, Астана 010000, Қазақстан',
+      phone: '+7 708 482 0070',
       email: 'reservations@tanhotel.com',
       hours: 'Кіру: 15:00 | Шығу: 11:00'
-    },
-    booking: {
-      backToHome: '← Басты бетке қайту',
-      progress: {
-        accommodation: 'ОРНАЛАСУ',
-        extra: 'ҚОСЫМША',
-        guestInfo: 'АҚПАРАТ',
-        bookingConfirm: 'РАСТАУ'
-      },
-      steps: {
-        step1: {
-          title: 'Бөлмеңізді таңдаңыз',
-          standardRoom: {
-            name: 'Стандартты бөлме',
-            desc: 'Барлық қажетті ыңғайлылықтармен жабдықталған ыңғайлы және заманауи бөлме',
-            features: ['Екі төсекті кереует', 'Қала көрінісі', 'Тегін WiFi'],
-            price: '18,000₸-ден',
-            selectBtn: 'БӨЛМЕНІ ТАҢДАУ',
-            bookNow: 'БРОНДАУ'
-          },
-          deluxeRoom: {
-            name: 'Люкс бөлме',
-            desc: 'Премиум ыңғайлылықтар мен қала көрінісі бар кең бөлме',
-            features: ['King-size кереует', 'Қала көрінісі', 'Тегін WiFi', 'Мини-бар'],
-            price: '22,000₸-ден',
-            selectBtn: 'БӨЛМЕНІ ТАҢДАУ',
-            bookNow: 'БРОНДАУ'
-          }
-        },
-        step2: {
-          title: 'Күндер мен қонақтарды таңдаңыз',
-          selectCheckIn: 'Кіру күнін таңдаңыз',
-          selectCheckOut: 'Шығу күнін таңдаңыз',
-          back: 'Артқа',
-          continue: 'Жалғастыру'
-        },
-        step3: {
-          title: 'Қонақ ақпараты',
-          titleLabel: 'Атау',
-          selectTitle: 'Атауды таңдаңыз',
-          firstName: 'Аты',
-          firstNamePlaceholder: 'Атыңызды енгізіңіз',
-          lastName: 'Тегі',
-          lastNamePlaceholder: 'Тегіңізді енгізіңіз',
-          email: 'Email',
-          emailPlaceholder: 'Email-діңізді енгізіңіз',
-          phone: 'Телефон',
-          back: 'Артқа',
-          completeBooking: 'Брондауды аяқтау',
-          processing: 'Өңделуде...',
-          bookingSummary: 'Брондау қорытындысы',
-          checkIn: 'Кіру',
-          checkOut: 'Шығу',
-          guests: 'Қонақтар',
-          room: 'Бөлме',
-          breakfast: 'Таңғы ас',
-          notSelected: 'Таңдалмаған',
-          included: 'Қосылған',
-          notIncluded: 'Қосылмаған',
-          edit: 'Өңдеу',
-          roomRate: 'Бөлме бағасы',
-          nights: 'түн',
-          taxesFees: 'Салықтар және алымдар',
-          total: 'Барлығы',
-          cancellationPolicy: 'Бас тарту саясаты',
-          cancellationText: 'Кіруге 24 сағат бұрын тегін бас тарту.'
-        },
-        step4: {
-          title: 'Брондау расталды!',
-          confirmationMessage: 'Сіздің брондауыңыз сәтті расталды. Сізді күтуге асығып отырмыз.',
-          bookingSummary: 'Брондау қорытындысы',
-          room: 'Бөлме',
-          checkIn: 'Кіру',
-          checkOut: 'Шығу',
-          guests: 'Қонақтар',
-          breakfast: 'Таңғы ас',
-          spaVouchers: 'Спа-ваучерлер',
-          backToHome: 'Басты бетке қайту'
-        }
-      },
-      calendar: {
-        selectCheckIn: 'Кіру күнін таңдаңыз',
-        selectCheckOut: 'Шығу күнін таңдаңыз',
-        available: 'Қолжетімді',
-        selected: 'Таңдалған',
-        inRange: 'Диапазонда',
-        previewRange: 'Алдын ала қарау',
-        clearDates: '× Күндерді тазалау',
-        daysSelected: 'күн таңдалды',
-        daySelected: 'күн таңдалды'
-      }
     }
   }
 }
 
 function App() {
   const [lang, setLang] = useState('en')
-  const [currentStep, setCurrentStep] = useState(1)
-  const [selectedRoom, setSelectedRoom] = useState(null)
-  const [checkInDate, setCheckInDate] = useState(null)
-  const [checkOutDate, setCheckOutDate] = useState(null)
-  const [guestInfo, setGuestInfo] = useState({
-    title: '',
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: ''
-  })
-  const [isBookingComplete, setIsBookingComplete] = useState(false)
-  const [showBooking, setShowBooking] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [showCalendar, setShowCalendar] = useState(false)
+  const [selectedDates, setSelectedDates] = useState({ checkIn: null, checkOut: null })
+  const [hoveredDate, setHoveredDate] = useState(null)
+  
+  // Get current month index (0-11) for 2025
+  const getCurrentMonthIndex = () => {
+    const now = new Date()
+    const currentYear = now.getFullYear()
+    const currentMonth = now.getMonth()
+    
+    // If we're in 2025, use current month, otherwise start from January
+    if (currentYear === 2025) {
+      return currentMonth
+    } else if (currentYear < 2025) {
+      return 0 // Start from January 2025
+    } else {
+      return 11 // December 2025 if we're past 2025
+    }
+  }
+  
+  const [currentMonth, setCurrentMonth] = useState(getCurrentMonthIndex())
   
   const t = translations[lang]
   const langs = [
@@ -573,266 +309,252 @@ function App() {
     { code: 'kz', label: 'KK' },
   ]
 
-  const handleRoomSelect = (roomType) => {
-    setSelectedRoom(roomType)
-    setCurrentStep(2)
-  }
+  // Get today's date
+  const today = new Date()
+  today.setHours(0, 0, 0, 0)
 
-  const handleDateSelect = (checkIn, checkOut) => {
-    setCheckInDate(checkIn)
-    setCheckOutDate(checkOut)
-    setCurrentStep(3)
-  }
+  // Generate calendar data with correct day offsets
+  const generateCalendarData = () => {
+    const months = [
+      { name: 'JANUARY 2025', year: 2025, month: 0 }, // January (0-indexed)
+      { name: 'FEBRUARY 2025', year: 2025, month: 1 }, // February (0-indexed)
+      { name: 'MARCH 2025', year: 2025, month: 2 }, // March (0-indexed)
+      { name: 'APRIL 2025', year: 2025, month: 3 }, // April (0-indexed)
+      { name: 'MAY 2025', year: 2025, month: 4 }, // May (0-indexed)
+      { name: 'JUNE 2025', year: 2025, month: 5 }, // June (0-indexed)
+      { name: 'JULY 2025', year: 2025, month: 6 }, // July (0-indexed)
+      { name: 'AUGUST 2025', year: 2025, month: 7 }, // August (0-indexed)
+      { name: 'SEPTEMBER 2025', year: 2025, month: 8 }, // September (0-indexed)
+      { name: 'OCTOBER 2025', year: 2025, month: 9 }, // October (0-indexed)
+      { name: 'NOVEMBER 2025', year: 2025, month: 10 }, // November (0-indexed)
+      { name: 'DECEMBER 2025', year: 2025, month: 11 } // December (0-indexed)
+    ]
 
-  const handleGuestInfoSubmit = (info) => {
-    setGuestInfo(info)
-    setCurrentStep(4)
-    // Simulate processing
-    setTimeout(() => {
-      setIsBookingComplete(true)
-    }, 2000)
-  }
-
-  const resetBooking = () => {
-    setCurrentStep(1)
-    setSelectedRoom(null)
-    setCheckInDate(null)
-    setCheckOutDate(null)
-    setGuestInfo({})
-    setIsBookingComplete(false)
-    setShowBooking(false)
-  }
-
-  if (showBooking) {
-    return (
-      <div className="booking-container">
-        <div className="booking-header">
-          <button onClick={resetBooking} className="back-btn">
-            {t.booking.backToHome}
-          </button>
-        </div>
+    return months.map((monthInfo, monthIndex) => {
+      const firstDay = new Date(monthInfo.year, monthInfo.month, 1)
+      const lastDay = new Date(monthInfo.year, monthInfo.month + 1, 0)
+      
+      // Get the day of week for the first day (0 = Sunday, 1 = Monday, etc.)
+      // We want Monday to be 0, so we adjust
+      let startOffset = firstDay.getDay() - 1
+      if (startOffset < 0) startOffset = 6 // Sunday becomes 6
+      
+      const daysInMonth = lastDay.getDate()
+      
+      const days = []
+      
+      // Add empty days for offset
+      for (let i = 0; i < startOffset; i++) {
+        days.push({ day: '', className: 'empty' })
+      }
+      
+      // Add days of the month
+      for (let day = 1; day <= daysInMonth; day++) {
+        const date = new Date(monthInfo.year, monthInfo.month, day)
+        // Используем простое локальное форматирование без toISOString()
+        const dateString = `${monthInfo.year}-${String(monthInfo.month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`
+        const isPast = date < today
         
-        <div className="booking-progress">
-          <div className={`progress-step ${currentStep >= 1 ? 'active' : ''}`}>
-            {t.booking.progress.accommodation}
-          </div>
-          <div className={`progress-step ${currentStep >= 2 ? 'active' : ''}`}>
-            {t.booking.progress.extra}
-          </div>
-          <div className={`progress-step ${currentStep >= 3 ? 'active' : ''}`}>
-            {t.booking.progress.guestInfo}
-          </div>
-          <div className={`progress-step ${currentStep >= 4 ? 'active' : ''}`}>
-            {t.booking.progress.bookingConfirm}
-          </div>
-        </div>
-
-        {currentStep === 1 && (
-          <div className="booking-step">
-            <h2>{t.booking.steps.step1.title}</h2>
-            <div className="room-selection">
-              <div className="room-option">
-                <div className="room-image" style={{
-                  backgroundImage: `url('/photos/692091917.jpg')`
-                }}></div>
-                <div className="room-details">
-                  <h3>{t.booking.steps.step1.standardRoom.name}</h3>
-                  <p>{t.booking.steps.step1.standardRoom.desc}</p>
-                  <div className="room-features">
-                    {t.booking.steps.step1.standardRoom.features.map((feature, idx) => (
-                      <span key={idx} className="feature-tag">{feature}</span>
-                    ))}
-                  </div>
-                  <div className="room-price">{t.booking.steps.step1.standardRoom.price}</div>
-                  <button 
-                    onClick={() => handleRoomSelect('standard')}
-                    className="select-room-btn"
-                  >
-                    {t.booking.steps.step1.standardRoom.selectBtn}
-                  </button>
-                </div>
-              </div>
-              
-              <div className="room-option">
-                <div className="room-image" style={{
-                  backgroundImage: `url('/photos/692091927.jpg')`
-                }}></div>
-                <div className="room-details">
-                  <h3>{t.booking.steps.step1.deluxeRoom.name}</h3>
-                  <p>{t.booking.steps.step1.deluxeRoom.desc}</p>
-                  <div className="room-features">
-                    {t.booking.steps.step1.deluxeRoom.features.map((feature, idx) => (
-                      <span key={idx} className="feature-tag">{feature}</span>
-                    ))}
-                  </div>
-                  <div className="room-price">{t.booking.steps.step1.deluxeRoom.price}</div>
-                  <button 
-                    onClick={() => handleRoomSelect('deluxe')}
-                    className="select-room-btn"
-                  >
-                    {t.booking.steps.step1.deluxeRoom.selectBtn}
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {currentStep === 2 && (
-          <div className="booking-step">
-            <h2>{t.booking.steps.step2.title}</h2>
-            <div className="date-selection">
-              <div className="date-input">
-                <label>{t.booking.steps.step2.selectCheckIn}</label>
-                <input 
-                  type="date" 
-                  onChange={(e) => setCheckInDate(e.target.value)}
-                  value={checkInDate || ''}
-                />
-              </div>
-              <div className="date-input">
-                <label>{t.booking.steps.step2.selectCheckOut}</label>
-                <input 
-                  type="date" 
-                  onChange={(e) => setCheckOutDate(e.target.value)}
-                  value={checkOutDate || ''}
-                />
-              </div>
-              <div className="booking-actions">
-                <button onClick={() => setCurrentStep(1)} className="back-btn">
-                  {t.booking.steps.step2.back}
-                </button>
-                <button 
-                  onClick={() => setCurrentStep(3)} 
-                  className="continue-btn"
-                  disabled={!checkInDate || !checkOutDate}
-                >
-                  {t.booking.steps.step2.continue}
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {currentStep === 3 && (
-          <div className="booking-step">
-            <h2>{t.booking.steps.step3.title}</h2>
-            <form className="guest-form" onSubmit={(e) => {
-              e.preventDefault()
-              handleGuestInfoSubmit(guestInfo)
-            }}>
-              <div className="form-group">
-                <label>{t.booking.steps.step3.titleLabel}</label>
-                <select 
-                  value={guestInfo.title} 
-                  onChange={(e) => setGuestInfo({...guestInfo, title: e.target.value})}
-                  required
-                >
-                  <option value="">{t.booking.steps.step3.selectTitle}</option>
-                  <option value="Mr">Mr</option>
-                  <option value="Mrs">Mrs</option>
-                  <option value="Ms">Ms</option>
-                  <option value="Dr">Dr</option>
-                </select>
-              </div>
-              <div className="form-group">
-                <label>{t.booking.steps.step3.firstName}</label>
-                <input 
-                  type="text" 
-                  placeholder={t.booking.steps.step3.firstNamePlaceholder}
-                  value={guestInfo.firstName}
-                  onChange={(e) => setGuestInfo({...guestInfo, firstName: e.target.value})}
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <label>{t.booking.steps.step3.lastName}</label>
-                <input 
-                  type="text" 
-                  placeholder={t.booking.steps.step3.lastNamePlaceholder}
-                  value={guestInfo.lastName}
-                  onChange={(e) => setGuestInfo({...guestInfo, lastName: e.target.value})}
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <label>{t.booking.steps.step3.email}</label>
-                <input 
-                  type="email" 
-                  placeholder={t.booking.steps.step3.emailPlaceholder}
-                  value={guestInfo.email}
-                  onChange={(e) => setGuestInfo({...guestInfo, email: e.target.value})}
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <label>{t.booking.steps.step3.phone}</label>
-                <input 
-                  type="tel" 
-                  value={guestInfo.phone}
-                  onChange={(e) => setGuestInfo({...guestInfo, phone: e.target.value})}
-                  required
-                />
-              </div>
-              <div className="booking-actions">
-                <button type="button" onClick={() => setCurrentStep(2)} className="back-btn">
-                  {t.booking.steps.step3.back}
-                </button>
-                <button type="submit" className="complete-btn">
-                  {t.booking.steps.step3.completeBooking}
-                </button>
-              </div>
-            </form>
-          </div>
-        )}
-
-        {currentStep === 4 && (
-          <div className="booking-step">
-            {!isBookingComplete ? (
-              <div className="processing">
-                <div className="spinner"></div>
-                <p>{t.booking.steps.step3.processing}</p>
-              </div>
-            ) : (
-              <div className="booking-confirmation">
-                <h2>{t.booking.steps.step4.title}</h2>
-                <p>{t.booking.steps.step4.confirmationMessage}</p>
-                
-                <div className="booking-summary">
-                  <h3>{t.booking.steps.step4.bookingSummary}</h3>
-                  <div className="summary-item">
-                    <span>{t.booking.steps.step4.room}:</span>
-                    <span>{selectedRoom === 'standard' ? t.booking.steps.step1.standardRoom.name : t.booking.steps.step1.deluxeRoom.name}</span>
-                  </div>
-                  <div className="summary-item">
-                    <span>{t.booking.steps.step4.checkIn}:</span>
-                    <span>{checkInDate}</span>
-                  </div>
-                  <div className="summary-item">
-                    <span>{t.booking.steps.step4.checkOut}:</span>
-                    <span>{checkOutDate}</span>
-                  </div>
-                  <div className="summary-item">
-                    <span>{t.booking.steps.step4.guests}:</span>
-                    <span>{guestInfo.title} {guestInfo.firstName} {guestInfo.lastName}</span>
-                  </div>
-                </div>
-                
-                <button onClick={resetBooking} className="back-home-btn">
-                  {t.booking.steps.step4.backToHome}
-                </button>
-              </div>
-            )}
-          </div>
-        )}
-      </div>
-    )
+        days.push({
+          day,
+          date: dateString,
+          className: isPast ? 'past' : 'available'
+        })
+      }
+      
+      return {
+        month: monthInfo.name,
+        days
+      }
+    })
   }
+
+  const calendarData = generateCalendarData()
+
+  // Calculate nights between check-in and check-out
+  const calculateNights = () => {
+    if (!selectedDates.checkIn || !selectedDates.checkOut) return 0
+    const [checkInYear, checkInMonth, checkInDay] = selectedDates.checkIn.split('-').map(Number)
+    const [checkOutYear, checkOutMonth, checkOutDay] = selectedDates.checkOut.split('-').map(Number)
+    const checkIn = new Date(checkInYear, checkInMonth - 1, checkInDay)
+    const checkOut = new Date(checkOutYear, checkOutMonth - 1, checkOutDay)
+    const diffTime = checkOut.getTime() - checkIn.getTime()
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
+    return diffDays
+  }
+
+  // Calculate nights for hover preview
+  const calculateHoverNights = (hoverDate) => {
+    if (!selectedDates.checkIn || !hoverDate) return 0
+    const [checkInYear, checkInMonth, checkInDay] = selectedDates.checkIn.split('-').map(Number)
+    const [hoverYear, hoverMonth, hoverDay] = hoverDate.split('-').map(Number)
+    const checkIn = new Date(checkInYear, checkInMonth - 1, checkInDay)
+    const hover = new Date(hoverYear, hoverMonth - 1, hoverDay)
+    if (hover <= checkIn) return 0
+    const diffTime = hover.getTime() - checkIn.getTime()
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
+    return diffDays
+  }
+
+  // Check if date is in the past
+  const isPastDate = (dateString) => {
+    const [year, month, day] = dateString.split('-').map(Number)
+    const date = new Date(year, month - 1, day)
+    date.setHours(0, 0, 0, 0)
+    return date < today
+  }
+
+  // Check if date is disabled (only past dates are disabled)
+  const isDateDisabled = (dateString) => {
+    // Прошедшие даты всегда заблокированы
+    if (isPastDate(dateString)) return true
+    
+    return false
+  }
+
+  // Get CSS classes for calendar day
+  const getDayClasses = (day, monthIndex) => {
+    if (!day.date) return 'empty'
+    
+    const classes = []
+    const dateString = day.date
+    
+    if (isPastDate(dateString)) {
+      classes.push('past')
+    } else if (isDateDisabled(dateString)) {
+      classes.push('disabled')
+    }
+    
+    if (selectedDates.checkIn === dateString) {
+      classes.push('selected', 'range-start')
+    } else if (selectedDates.checkOut === dateString) {
+      classes.push('selected', 'range-end')
+    } else if (selectedDates.checkIn && selectedDates.checkOut) {
+      const [year, month, day] = dateString.split('-').map(Number)
+      const [checkInYear, checkInMonth, checkInDay] = selectedDates.checkIn.split('-').map(Number)
+      const [checkOutYear, checkOutMonth, checkOutDay] = selectedDates.checkOut.split('-').map(Number)
+      const date = new Date(year, month - 1, day)
+      const checkIn = new Date(checkInYear, checkInMonth - 1, checkInDay)
+      const checkOut = new Date(checkOutYear, checkOutMonth - 1, checkOutDay)
+      if (date > checkIn && date < checkOut) {
+        classes.push('in-range')
+      }
+    } else if (selectedDates.checkIn && hoveredDate) {
+      const [year, month, day] = dateString.split('-').map(Number)
+      const [checkInYear, checkInMonth, checkInDay] = selectedDates.checkIn.split('-').map(Number)
+      const [hoverYear, hoverMonth, hoverDay] = hoveredDate.split('-').map(Number)
+      const date = new Date(year, month - 1, day)
+      const checkIn = new Date(checkInYear, checkInMonth - 1, checkInDay)
+      const hovered = new Date(hoverYear, hoverMonth - 1, hoverDay)
+      
+      // Показываем диапазон только для дат между check-in и hovered (исключая check-in)
+      if (date > checkIn && date <= hovered) {
+        classes.push('in-range')
+      }
+    }
+    
+    return classes.join(' ')
+  }
+
+  const handleDateSelect = (date) => {
+    if (isPastDate(date)) return
+    
+    // Если нет ни одной даты выбрано → при клике на дату:
+    if (!selectedDates.checkIn) {
+      setSelectedDates({ checkIn: date, checkOut: null })
+      return
+    }
+    
+    // Если выбран только check-in, но нет check-out:
+    if (selectedDates.checkIn && !selectedDates.checkOut) {
+      // Если clickedDate < checkIn и clickedDate ≥ today → перезапись даты въезда
+      if (date < selectedDates.checkIn) {
+        setSelectedDates({ checkIn: date, checkOut: null })
+      }
+      // Если clickedDate > checkIn → устанавливаем check-out
+      else if (date > selectedDates.checkIn) {
+        setSelectedDates({ ...selectedDates, checkOut: date })
+        setShowCalendar(false)
+      }
+      // Если clickedDate == checkIn → ничего не делать
+      // (это происходит автоматически, так как мы не обрабатываем этот случай)
+    }
+    
+    // Если выбраны обе даты (check-in и check-out):
+    if (selectedDates.checkIn && selectedDates.checkOut) {
+      // Любой клик сбрасывает диапазон и начинает с checkIn = clickedDate, checkOut = null
+      setSelectedDates({ checkIn: date, checkOut: null })
+    }
+  }
+
+  const handleDateHover = (date) => {
+    // Hover работает только если есть check-in, но нет check-out, и дата после check-in
+    if (selectedDates.checkIn && !selectedDates.checkOut && date > selectedDates.checkIn && !isPastDate(date)) {
+      setHoveredDate(date)
+    }
+  }
+
+  const handleDateLeave = () => {
+    setHoveredDate(null)
+  }
+
+  const handleMonthChange = (direction) => {
+    const newMonth = currentMonth + direction
+    if (newMonth >= 0 && newMonth < calendarData.length - 1) {
+      setCurrentMonth(newMonth)
+    }
+  }
+
+  const formatDate = (dateString) => {
+    if (!dateString) return ''
+    // Создаем дату в локальном часовом поясе
+    const [year, month, day] = dateString.split('-').map(Number)
+    const date = new Date(year, month - 1, day) // month - 1 потому что месяцы 0-indexed
+    
+    // Используем простое локальное форматирование
+    return date.toLocaleDateString('en-US', { 
+      month: 'short', 
+      day: 'numeric'
+    })
+  }
+
+  const openCalendar = () => {
+    setShowCalendar(true)
+  }
+
+  const closeCalendar = () => {
+    setShowCalendar(false)
+    setHoveredDate(null)
+  }
+
+  const nights = calculateNights()
+  const hoverNights = calculateHoverNights(hoveredDate)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY
+      setIsScrolled(scrollPosition > 100)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (showCalendar && !event.target.closest('.calendar-container') && !event.target.closest('.booking-form-field')) {
+        setShowCalendar(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [showCalendar])
 
   return (
     <div className="ritz-style-root">
-      {/* Navigation */}
-      <nav className="ritz-nav">
+      {/* Fixed Navigation (appears on scroll) */}
+      <nav className={`ritz-nav ${isScrolled ? 'scrolled' : ''}`}>
         <div className="nav-container">
           <div className="nav-logo">
             <h1>TAN HOTEL</h1>
@@ -855,7 +577,7 @@ function App() {
                 </button>
               )).reduce((prev, curr) => [prev, <span key={Math.random()}>|</span>, curr])}
             </div>
-            <button className="reserve-btn" onClick={() => setShowBooking(true)}>{t.hero.cta}</button>
+            <button className="reserve-btn">{t.hero.cta}</button>
           </div>
         </div>
       </nav>
@@ -866,18 +588,224 @@ function App() {
           backgroundImage: `url('/photos/692091920.jpg')`
         }}>
           <div className="hero-overlay">
+            {/* Hero Navigation */}
+            <nav className={`hero-nav ${isScrolled ? 'scrolled' : ''}`}>
+              <div className="nav-container">
+                <div className="nav-logo">
+                  <h1>TAN HOTEL</h1>
+                </div>
+                <div className="nav-menu">
+                  <a href="#rooms">{t.nav.rooms}</a>
+                  <a href="#dining">{t.nav.dining}</a>
+                  <a href="#about">{t.nav.about}</a>
+                  <a href="#contact">{t.nav.contact}</a>
+                </div>
+                <div className="nav-actions">
+                  <div className="lang-switch">
+                    {langs.map(l => (
+                      <button
+                        key={l.code}
+                        onClick={() => setLang(l.code)}
+                        className={lang === l.code ? 'active' : ''}
+                      >
+                        {l.label}
+                      </button>
+                    )).reduce((prev, curr) => [prev, <span key={Math.random()}>|</span>, curr])}
+                  </div>
+                  <button className="reserve-btn">{t.hero.cta}</button>
+                </div>
+              </div>
+            </nav>
+
             <div className="hero-content">
               <h1 className="hero-title">{t.hero.title}</h1>
               <h2 className="hero-subtitle">{t.hero.subtitle}</h2>
               <p className="hero-description">{t.hero.description}</p>
-              <button className="hero-cta" onClick={() => setShowBooking(true)}>{t.hero.cta}</button>
             </div>
+            
           </div>
         </div>
-        <a href="#about" className="scroll-down">
-          <span className="scroll-down-text">{t.hero.scrollDown}</span>
-          <span className="scroll-down-arrow">↓</span>
-        </a>
+        
+        {/* Booking Form */}
+        <div className="booking-form-container">
+          <div className="booking-form">
+            <div className="booking-form-field" onClick={openCalendar}>
+              <div className="field-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A68E66" strokeWidth="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+              </div>
+              <input 
+                type="text" 
+                placeholder="Check-in" 
+                className="booking-input" 
+                value={formatDate(selectedDates.checkIn)}
+                readOnly
+              />
+            </div>
+            
+            <div className="booking-arrow">→</div>
+            
+            <div className="booking-form-field" onClick={openCalendar}>
+              <div className="field-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A68E66" strokeWidth="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+              </div>
+              <input 
+                type="text" 
+                placeholder="Check-out" 
+                className="booking-input" 
+                value={formatDate(selectedDates.checkOut)}
+                readOnly
+              />
+            </div>
+            
+            <div className="booking-form-field">
+              <div className="field-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A68E66" strokeWidth="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <input type="text" placeholder="2 Adults, 0 Children" className="booking-input" />
+            </div>
+            
+            <div className="booking-form-field">
+              <div className="field-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A68E66" strokeWidth="2">
+                  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                  <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                </svg>
+              </div>
+              <input type="text" placeholder="Special codes" className="booking-input" />
+            </div>
+            
+            <button className="booking-book-btn">
+              <span>Book</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        {/* Calendar Modal */}
+        {showCalendar && (
+          <div className="calendar-modal">
+            <div className="calendar-container">
+              <button className="calendar-close" onClick={closeCalendar}>
+                ×
+              </button>
+              
+              {/* Calendar Header with Navigation */}
+              <div className="calendar-header">
+                <button className="calendar-nav-btn" onClick={() => handleMonthChange(-1)} disabled={currentMonth === 0}>
+                  ‹
+                </button>
+                <h2 className="calendar-title">
+                  {calendarData[currentMonth].month} – {calendarData[currentMonth + 1]?.month || ''}
+                </h2>
+                <button className="calendar-nav-btn" onClick={() => handleMonthChange(1)} disabled={currentMonth >= calendarData.length - 2}>
+                  ›
+                </button>
+              </div>
+              
+              <div className="calendar-grid">
+                <div className="calendar-month">
+                  <div className="calendar-weekdays">
+                    <span>Mo</span>
+                    <span>Tu</span>
+                    <span>We</span>
+                    <span>Th</span>
+                    <span>Fr</span>
+                    <span>Sa</span>
+                    <span>Su</span>
+                  </div>
+                  <div className="calendar-days">
+                    {calendarData[currentMonth].days.map((day, idx) => (
+                      <button
+                        key={idx}
+                        className={`calendar-day ${getDayClasses(day, currentMonth)}`}
+                        onClick={() => day.date && handleDateSelect(day.date)}
+                        onMouseEnter={() => day.date && handleDateHover(day.date)}
+                        onMouseLeave={handleDateLeave}
+                        disabled={!day.date || isDateDisabled(day.date)}
+                      >
+                        {day.day}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+                
+                {calendarData[currentMonth + 1] && (
+                  <div className="calendar-month">
+                    <div className="calendar-weekdays">
+                      <span>Mo</span>
+                      <span>Tu</span>
+                      <span>We</span>
+                      <span>Th</span>
+                      <span>Fr</span>
+                      <span>Sa</span>
+                      <span>Su</span>
+                    </div>
+                    <div className="calendar-days">
+                      {calendarData[currentMonth + 1].days.map((day, idx) => (
+                        <button
+                          key={idx}
+                          className={`calendar-day ${getDayClasses(day, currentMonth + 1)}`}
+                          onClick={() => day.date && handleDateSelect(day.date)}
+                          onMouseEnter={() => day.date && handleDateHover(day.date)}
+                          onMouseLeave={handleDateLeave}
+                          disabled={!day.date || isDateDisabled(day.date)}
+                        >
+                          {day.day}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+              
+              {/* Legend in bottom left */}
+              <div className="calendar-legend">
+                <div className="legend-item">
+                  <div className="legend-color selected"></div>
+                  <span>Selected dates</span>
+                </div>
+                <div className="legend-item">
+                  <div className="legend-color range"></div>
+                  <span>Date range</span>
+                </div>
+                <div className="legend-item">
+                  <div className="legend-color past"></div>
+                  <span>Past dates</span>
+                </div>
+              </div>
+              
+              {/* Nights counter in bottom right */}
+              {(nights > 0 || hoverNights > 0) && (
+                <div className="calendar-nights">
+                  <p className="calendar-nights-text">
+                    <span className="moon-icon">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#BDA77B" strokeWidth="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                      </svg>
+                    </span>
+                    {hoverNights > 0 ? hoverNights : nights} night{(hoverNights > 0 ? hoverNights : nights) !== 1 ? 's' : ''}
+                  </p>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
       </section>
 
       {/* About Section */}
@@ -938,7 +866,7 @@ function App() {
                   ))}
                 </div>
                 <div className="room-price">{t.rooms.standard.price}</div>
-                <button className="room-book-btn" onClick={() => setShowBooking(true)}>Book Now</button>
+                <button className="room-book-btn">Book Now</button>
               </div>
             </div>
             <div className="room-card featured">
@@ -954,7 +882,7 @@ function App() {
                   ))}
                 </div>
                 <div className="room-price">{t.rooms.deluxe.price}</div>
-                <button className="room-book-btn" onClick={() => setShowBooking(true)}>Book Now</button>
+                <button className="room-book-btn">Book Now</button>
               </div>
             </div>
           </div>
@@ -1023,27 +951,17 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className="contact-form">
-              <h3>Make a Reservation</h3>
-              <form>
-                <div className="form-group">
-                  <input type="text" placeholder="Name" />
-                </div>
-                <div className="form-group">
-                  <input type="email" placeholder="Email" />
-                </div>
-                <div className="form-group">
-                  <input type="tel" placeholder="Phone" />
-                </div>
-                <div className="form-group">
-                  <select>
-                    <option>Select Room Type</option>
-                    <option>Standard Room</option>
-                    <option>Deluxe Room</option>
-                  </select>
-                </div>
-                <button type="submit" className="submit-btn">Request Booking</button>
-              </form>
+            <div className="contact-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2504.1234567890123!2d71.4167!3d51.1801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4245809c4c8b5b5f%3A0x4c8b5b5f!2z0JDQstGC0L7Qv9Cw0L3QuNC6LCDQmtCw0LfQsNGF0YHQutCw0Y8g0L7QsdC70LDRgdGC0Yw!5e0!3m2!1sru!2skz!4v1703123456789"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="TAN HOTEL Location"
+              ></iframe>
             </div>
           </div>
         </div>
