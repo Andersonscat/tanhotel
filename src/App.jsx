@@ -307,6 +307,10 @@ function App() {
   
   const [currentMonth, setCurrentMonth] = useState(getCurrentMonthIndex())
   
+  const handleLogoClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   const t = translations[lang]
   const langs = [
     { code: 'en', label: 'EN' },
@@ -467,6 +471,10 @@ function App() {
     // Если нет ни одной даты выбрано → при клике на дату:
     if (!selectedDates.checkIn) {
       setSelectedDates({ checkIn: date, checkOut: null })
+      // Скрываем ошибку при изменении дат
+      if (bookingError) {
+        setBookingError('')
+      }
       return
     }
     
@@ -489,6 +497,11 @@ function App() {
     if (selectedDates.checkIn && selectedDates.checkOut) {
       // Любой клик сбрасывает диапазон и начинает с checkIn = clickedDate, checkOut = null
       setSelectedDates({ checkIn: date, checkOut: null })
+    }
+    
+    // Скрываем ошибку при изменении дат
+    if (bookingError) {
+      setBookingError('')
     }
   }
 
@@ -564,25 +577,46 @@ function App() {
       }
       return newCount
     })
+    
+    // Скрываем ошибку при изменении количества гостей
+    if (bookingError) {
+      setBookingError('')
+    }
   }
 
   const updateRoomCount = (count) => {
     setRoomCount(count)
-    setShowRoomSelector(false)
+    // Скрываем ошибку при изменении количества комнат
+    if (bookingError) {
+      setBookingError('')
+    }
   }
 
   const validateBooking = () => {
     const totalGuests = guestCount.adults + guestCount.children
     const maxGuestsPerRoom = 2
-    const requiredRooms = Math.ceil(totalGuests / maxGuestsPerRoom)
+    const maxRoomsPerClient = 2
     
-    if (roomCount > 2) {
-      setBookingError('Максимум 2 номера на одного бронирующего.')
+    // Check for adults presence
+    if (guestCount.adults === 0 && guestCount.children > 0) {
+      setBookingError('Add at least one adult for booking')
       return false
     }
     
+    if (guestCount.adults === 0 && roomCount > 0) {
+      setBookingError('Cannot book a room without an adult')
+      return false
+    }
+    
+    // Check maximum rooms per client
+    if (roomCount > maxRoomsPerClient) {
+      setBookingError('Maximum 2 rooms per guest')
+      return false
+    }
+    
+    // Check guests per room
     if (totalGuests > roomCount * maxGuestsPerRoom) {
-      setBookingError(`Максимум ${maxGuestsPerRoom} гостя на номер. Пожалуйста, выберите больше номеров.`)
+      setBookingError('Each room accommodates up to 2 guests. Please adjust the number of rooms or guests.')
       return false
     }
     
@@ -592,9 +626,12 @@ function App() {
 
   const handleBookClick = () => {
     if (validateBooking()) {
+      // Скрываем баннер ошибки при успешной валидации
+      setBookingError('')
       // Здесь можно добавить логику перехода к следующему шагу
       console.log('Booking validated:', { selectedDates, guestCount, roomCount })
     }
+    // Если валидация не прошла, ошибка уже установлена в validateBooking()
   }
 
   const nights = calculateNights()
@@ -632,7 +669,7 @@ function App() {
       {/* Fixed Navigation (appears on scroll) */}
       <nav className={`ritz-nav ${isScrolled ? 'scrolled' : ''}`}>
         <div className="nav-container">
-          <div className="nav-logo">
+          <div className="nav-logo" onClick={handleLogoClick}>
             <h1>TAN HOTEL</h1>
           </div>
           <div className="nav-menu">
@@ -667,7 +704,7 @@ function App() {
             {/* Hero Navigation */}
             <nav className={`hero-nav ${isScrolled ? 'scrolled' : ''}`}>
               <div className="nav-container">
-                <div className="nav-logo">
+                <div className="nav-logo" onClick={handleLogoClick}>
                   <h1>TAN HOTEL</h1>
                 </div>
                 <div className="nav-menu">
@@ -754,7 +791,7 @@ function App() {
                 type="text" 
                 placeholder="Rooms" 
                 className="booking-input" 
-                value={`${roomCount} Room${roomCount > 1 ? 's' : ''}`}
+                value={`Rooms: ${roomCount}`}
                 readOnly
               />
               
@@ -762,18 +799,36 @@ function App() {
               {showRoomSelector && (
                 <div className="room-selector-dropdown">
                   <div className="room-selector-content">
-                    {[1, 2, 3, 4].map(roomNum => (
-                      <button
-                        key={roomNum}
-                        className={`room-option ${roomCount === roomNum ? 'selected' : ''}`}
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          updateRoomCount(roomNum);
-                        }}
-                      >
-                        {roomNum} Room{roomNum > 1 ? 's' : ''}
-                      </button>
-                    ))}
+                    <div className="room-selector-section">
+                      <h3>Rooms</h3>
+                      <div className="room-counter">
+                        <button 
+                          className="room-counter-btn" 
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            if (roomCount > 1) {
+                              updateRoomCount(roomCount - 1);
+                            }
+                          }}
+                          disabled={roomCount <= 1}
+                        >
+                          −
+                        </button>
+                        <span className="room-counter-number">{roomCount}</span>
+                        <button 
+                          className="room-counter-btn" 
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            if (roomCount < 19) {
+                              updateRoomCount(roomCount + 1);
+                            }
+                          }}
+                          disabled={roomCount >= 19}
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               )}
@@ -878,7 +933,7 @@ function App() {
           {/* Booking Error Message */}
           {bookingError && (
             <div className="booking-error">
-              <span className="error-icon">❌</span>
+              <span className="error-icon">🛈</span>
               <span className="error-text">{bookingError}</span>
             </div>
           )}

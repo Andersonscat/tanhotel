@@ -44,6 +44,9 @@ body {
 .ritz-nav.scrolled {
   transform: translateY(0);
   opacity: 1;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .nav-container {
@@ -56,12 +59,17 @@ body {
   padding: 0 4rem;
 }
 
+.nav-logo {
+  cursor: pointer;
+}
+
 .nav-logo h1 {
   font-size: 1.6rem;
   font-weight: 200;
   letter-spacing: 3px;
   color: #1a1a1a;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .nav-menu {
@@ -70,28 +78,30 @@ body {
 }
 
 .nav-menu a {
+  color: #2c2c2c;
   text-decoration: none;
-  color: #1a1a1a;
-  font-size: 0.85rem;
-  font-weight: 300;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease-in-out;
   position: relative;
+  padding: 0.5rem 0;
 }
 
 .nav-menu a:hover {
-  color: #8b7355;
+  color: #000;
+  transform: translateY(-2px);
+  transition: all 0.3s ease-in-out;
 }
 
 .nav-menu a::after {
   content: '';
   position: absolute;
-  bottom: -5px;
+  bottom: 0;
   left: 0;
   width: 0;
   height: 1px;
-  background: #8b7355;
+  background: #000;
   transition: width 0.3s ease;
 }
 
@@ -117,36 +127,48 @@ body {
 .lang-switch button {
   background: none;
   border: none;
+  color: #000;
+  font-size: 15px;
+  font-weight: 400;
   cursor: pointer;
-  padding: 0.3rem 0.6rem;
-  transition: all 0.3s ease;
-  color: #666;
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  margin: 0 8px;
+  transition: all 0.2s ease;
+  padding: 0.25rem 0;
+}
+
+.lang-switch button:hover {
+  color: #fff;
+  transform: translateY(-1px);
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .lang-switch button.active {
-  color: #1a1a1a;
-  font-weight: 400;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: white;
+  text-underline-offset: 2px;
 }
 
 .reserve-btn {
-  background: #1a1a1a;
-  color: white;
+  background: #A68E66;
+  color: #3c2b1e;
   border: none;
-  padding: 1rem 2rem;
-  font-size: 0.8rem;
-  letter-spacing: 2px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 1px;
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-weight: 300;
+  border-radius: 4px;
 }
 
 .reserve-btn:hover {
-  background: #8b7355;
-  transform: translateY(-2px);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
 }
 
 /* Hero Section */
@@ -193,10 +215,9 @@ body {
 }
 
 .hero-nav.scrolled {
-  background: rgba(255, 255, 255, 0.98);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-  padding: 1.5rem 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .hero-nav .nav-container {
@@ -209,12 +230,17 @@ body {
   padding: 0 4rem;
 }
 
+.hero-nav .nav-logo {
+  cursor: pointer;
+}
+
 .hero-nav .nav-logo h1 {
   font-size: 1.6rem;
   font-weight: 200;
   letter-spacing: 3px;
   color: white;
   text-transform: uppercase;
+  margin: 0;
   transition: all 0.4s ease;
 }
 
@@ -228,33 +254,43 @@ body {
 }
 
 .hero-nav .nav-menu a {
+  color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
-  color: white;
-  font-size: 0.85rem;
-  font-weight: 300;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  transition: all 0.4s ease;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease-in-out;
   position: relative;
+  padding: 0.5rem 0;
 }
 
 .hero-nav.scrolled .nav-menu a {
-  color: #1a1a1a;
+  color: #2c2c2c;
 }
 
 .hero-nav .nav-menu a:hover {
-  color: #a68c6d;
+  color: #000;
+  transform: translateY(-2px);
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-nav.scrolled .nav-menu a:hover {
+  color: #000;
 }
 
 .hero-nav .nav-menu a::after {
   content: '';
   position: absolute;
-  bottom: -5px;
+  bottom: 0;
   left: 0;
   width: 0;
   height: 1px;
-  background: #a68c6d;
+  background: #000;
   transition: width 0.3s ease;
+}
+
+.hero-nav.scrolled .nav-menu a::after {
+  background: #000;
 }
 
 .hero-nav .nav-menu a:hover::after {
@@ -279,26 +315,39 @@ body {
 .hero-nav .lang-switch button {
   background: none;
   border: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+  font-weight: 400;
   cursor: pointer;
-  padding: 0.3rem 0.6rem;
-  transition: all 0.4s ease;
-  color: rgba(255,255,255,0.8);
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  margin: 0 8px;
+  transition: all 0.2s ease;
+  padding: 0.25rem 0;
 }
 
 .hero-nav.scrolled .lang-switch button {
-  color: #666;
+  color: #000;
+}
+
+.hero-nav .lang-switch button:hover {
+  color: #fff;
+  transform: translateY(-1px);
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .hero-nav .lang-switch button.active {
-  color: white;
-  font-weight: 400;
+  color: #fff;
+  font-weight: 500;
+}
+
+.hero-nav.scrolled .lang-switch button:hover {
+  color: #fff;
+  transform: translateY(-1px);
 }
 
 .hero-nav.scrolled .lang-switch button.active {
-  color: #1a1a1a;
+  color: #fff;
+  font-weight: 500;
 }
 
 .hero-nav .reserve-btn {
@@ -1820,13 +1869,37 @@ body {
   gap: 0.75rem;
   min-height: 48px;
   cursor: pointer;
-  border-bottom: 2px solid #A68E66;
-  transition: border-bottom 0.2s ease;
+  border-bottom: 1px solid rgba(166, 142, 102, 0.6);
+  transition: all 0.3s ease;
   padding-bottom: 0.5rem;
+  background: transparent;
+  border-radius: 0;
+}
+
+.booking-form-field:hover {
+  border-bottom-color: rgba(92, 60, 16, 0.4);
+  box-shadow: 0 2px 8px rgba(166, 142, 102, 0.1);
+}
+
+.booking-form-field:hover .field-icon svg {
+  stroke: #5c3c10;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  transform: scale(1.05);
+}
+
+.booking-form-field:hover .booking-input {
+  color: #5c3c10;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.booking-form-field:hover .booking-input::placeholder {
+  color: #5c3c10;
+  opacity: 0.7;
 }
 
 .booking-form-field:focus-within {
-  border-bottom: 3px solid #A68E66;
+  border-bottom: 2px solid rgba(92, 60, 16, 0.6);
+  box-shadow: 0 4px 12px rgba(166, 142, 102, 0.15);
 }
 
 .field-icon {
@@ -1835,11 +1908,13 @@ body {
   justify-content: center;
   color: #A68E66;
   flex-shrink: 0;
+  transition: all 0.2s ease;
 }
 
 .field-icon svg {
   width: 20px;
   height: 20px;
+  transition: all 0.2s ease;
 }
 
 .booking-input {
@@ -1864,6 +1939,7 @@ body {
   opacity: 0.6;
   font-weight: 400;
   font-size: 1.35rem;
+  transition: all 0.2s ease;
 }
 
 .booking-arrow {
@@ -1877,6 +1953,13 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 48px;
+  transition: all 0.2s ease;
+}
+
+.booking-arrow:hover {
+  color: #5c3c10;
+  opacity: 1;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .booking-book-btn {
@@ -1887,7 +1970,7 @@ body {
   font-size: 1.25rem;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -1899,12 +1982,34 @@ body {
   min-height: 56px;
   text-transform: uppercase;
   letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+.booking-book-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
 }
 
 .booking-book-btn:hover {
-  background: #8b7355;
+  background: #b89a7a;
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(166, 142, 102, 0.4);
+}
+
+.booking-book-btn:hover::before {
+  left: 100%;
+}
+
+.booking-book-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(166, 142, 102, 0.3);
 }
 
 .booking-book-btn svg {
@@ -2289,9 +2394,14 @@ body {
     margin-bottom: 0.25rem;
   }
   
-  .room-option {
-    font-size: 0.875rem;
-    padding: 0.5rem 0.75rem;
+  .room-counter-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 1rem;
+  }
+  
+  .room-counter-number {
+    font-size: 1rem;
   }
   
   /* Booking error responsive */
@@ -2496,9 +2606,9 @@ body {
   bottom: 100%;
   left: 0;
   background: white;
-  border-radius: 8px;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), 0 4px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   z-index: 1000;
   margin-bottom: 0.5rem;
   min-width: 280px;
@@ -2513,22 +2623,37 @@ body {
 }
 
 .guest-selector-section {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(166, 142, 102, 0.2);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.75rem 0;
-  border-bottom: 1px solid #f3f4f6;
 }
 
 .guest-selector-section:last-child {
   border-bottom: none;
 }
 
+.guest-selector-section:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 1px;
+  background: rgba(166, 142, 102, 0.2);
+}
+
 .guest-selector-section h3 {
-  font-size: 1rem;
-  font-weight: 500;
-  color: #374151;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #3A3A3A;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  letter-spacing: 0.01em;
   margin: 0;
+  margin-right: 16px;
 }
 
 .guest-counter {
@@ -2538,38 +2663,42 @@ body {
 }
 
 .guest-counter-btn {
-  background: #f3f4f6;
+  background: rgba(166, 142, 102, 0.1);
   border: none;
   width: 32px;
   height: 32px;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.125rem;
   font-weight: 500;
-  color: #374151;
+  color: #A68E66;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .guest-counter-btn:hover:not(:disabled) {
-  background: #e5e7eb;
+  background: rgba(166, 142, 102, 0.2);
   transform: scale(1.05);
+  color: #5c3c10;
+}
+
+.guest-counter-number {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #3A3A3A;
+  min-width: 20px;
+  text-align: center;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  letter-spacing: 0.01em;
 }
 
 .guest-counter-btn:disabled {
   opacity: 0.4;
   cursor: not-allowed;
   transform: none;
-}
-
-.guest-counter-number {
-  font-size: 1.125rem;
-  font-weight: 500;
-  color: #374151;
-  min-width: 20px;
-  text-align: center;
 }
 
 /* Room Selector Dropdown */
@@ -2582,9 +2711,9 @@ body {
   bottom: 100%;
   left: 0;
   background: white;
-  border-radius: 8px;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), 0 4px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   z-index: 1000;
   margin-bottom: 0.5rem;
   min-width: 200px;
@@ -2594,35 +2723,102 @@ body {
 .room-selector-content {
   display: flex;
   flex-direction: column;
-  padding: 0.75rem;
+  padding: 1.5rem;
 }
 
-.room-option {
+.room-selector-section {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(166, 142, 102, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+}
+
+.room-selector-section:last-child {
+  border-bottom: none;
+}
+
+.room-selector-section h3 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #3A3A3A;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  letter-spacing: 0.01em;
+  margin: 0;
+  margin-right: 16px;
+}
+
+.room-counter {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.room-counter-btn {
+  background: rgba(166, 142, 102, 0.1);
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #A68E66;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.room-counter-btn:hover:not(:disabled) {
+  background: rgba(166, 142, 102, 0.2);
+  transform: scale(1.05);
+  color: #5c3c10;
+}
+
+.room-counter-number {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #3A3A3A;
+  min-width: 20px;
+  text-align: center;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.room-counter-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.room-selector-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
   background: none;
   border: none;
-  padding: 0.75rem 1rem;
   cursor: pointer;
+  color: #a68e66;
+  padding: 0.25rem;
+  border-radius: 50%;
   transition: all 0.2s ease;
-  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1rem;
-  font-weight: 400;
-  color: #374151;
-  border-radius: 6px;
-  margin-bottom: 0.25rem;
+  font-weight: 300;
+  width: 24px;
+  height: 24px;
+  z-index: 1;
 }
 
-.room-option:hover {
-  background: #f3f4f6;
-}
-
-.room-option.selected {
-  background: #A68E66;
-  color: white;
-  font-weight: 500;
-}
-
-.room-option:last-child {
-  margin-bottom: 0;
+.room-selector-close:hover {
+  background: rgba(166, 142, 102, 0.1);
+  color: #5c3c10;
+  transform: scale(1.1);
 }
 
 /* Booking Error Message */
@@ -2630,22 +2826,39 @@ body {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  background: #fef2f2;
-  border: 1px solid #fecaca;
-  border-radius: 8px;
+  background: #faf8f5;
+  border: 1px solid rgba(166, 142, 102, 0.3);
+  border-radius: 12px;
   padding: 1rem 1.5rem;
   margin-top: 1rem;
-  color: #dc2626;
-  font-size: 0.95rem;
+  color: #8b7355;
+  font-size: 0.9rem;
   font-weight: 400;
   max-width: 100%;
+  animation: slideUpError 0.4s ease-out;
+  box-shadow: 0 4px 12px rgba(166, 142, 102, 0.1);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .error-icon {
-  font-size: 1.1rem;
+  font-size: 1rem;
   flex-shrink: 0;
+  opacity: 0.7;
+  color: #a68e66;
 }
 
 .error-text {
-  line-height: 1.4;
+  line-height: 1.5;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+@keyframes slideUpError {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
